@@ -16,7 +16,7 @@ async function uploadImage() {
 
   const file = fileInput.files[0];
 
-  previewDiv.innerHTML = <img src="${URL.createObjectURL(file)}">;
+  previewDiv.innerHTML = '<img src="${URL.createObjectURL(file)}">';
   resultDiv.innerHTML = "Analyzing... ⏳";
 
   try {
