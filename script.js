@@ -16,7 +16,7 @@ async function uploadImage() {
 
   const file = fileInput.files[0];
 
-  previewDiv.innerHTML = '<img src="${URL.createObjectURL(file)}">';
+  previewDiv.innerHTML = `<img src="${URL.createObjectURL(file)}">`;
   resultDiv.innerHTML = "Analyzing... ⏳";
 
   try {
@@ -30,7 +30,7 @@ async function uploadImage() {
 
     const output = result.data[0];
 
-    resultDiv.innerHTML = '<pre>${JSON.stringify(output, null, 2)}</pre>';
+    resultDiv.innerHTML = `<pre>${JSON.stringify(output, null, 2)}</pre>`;
   } catch (error) {
     console.error(error);
     resultDiv.innerHTML = "❌ Error connecting to AI. Open Console for details.";
